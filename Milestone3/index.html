@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Resume</title>
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            #form-box{
+                border: 1px solid black;
+                width:70%;
+                height: auto;
+                margin-left: 15%;
+                font-size: 20px;
+                background-color: rgb(28, 28, 28);
+                
+            }
+            #form-box div{
+                margin: 40px;
+            }
+            #form-box div input{
+                width: 98%;
+                height: 30px;
+                border: none;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                background-color: whitesmoke;
+            }
+            #form-box div #DOB{
+                width: 30%;
+                height: 30px;
+                border: none;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                background-color: whitesmoke;
+            }
+            #form-box #profile-Picture{
+                width: 30%;
+                height: 30px;
+                border: none;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                background-color: whitesmoke;
+            }
+            textarea{
+                width: 98%;
+                height: 30px;
+                border: none;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                background-color: whitesmoke;
+                resize: none;
+
+            }
+            #printBtn{
+                width: 99%;
+                height: 40px;
+                font-size: 20px;
+            }
+            #main-box{
+                width:100%;
+                height: 900;
+                background-color: silver;
+                
+            }
+			#main-box h1{
+				text-align:center;
+			}
+            #main-box #content-box{
+                margin-left: 15%;
+                padding-top:10px;
+            }
+            #content-box{
+                width:70%;
+                height: 900px;
+            }
+            #personal-info-box{
+                background-color: rgb(34, 34, 34);
+                color:white;
+                width: 30%;
+                height: 100%;
+                float: left;
+            }
+            #education-info-box{
+                background-color: whitesmoke;
+                color:rgb(28, 28, 28);
+                width: 70%;
+                float: right;
+                height: 100%;
+            }
+            #education-info-box h1{
+                text-align: center;
+            }
+            #education-info-box div{
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            #personal-info-box div{
+                padding: 20px;
+            }
+            #personal-info-box img{
+                width:150px;
+                height: 150px;
+                border-radius: 100px;
+            }
+            #personal-info-box h1{
+                text-align: center;
+            }
+            #name-info{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+            <div id="main-box">
+				<h1>Dynamic Resume</h1>
+                <div id="form-box">
+                    <div>
+                        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+                        <input type="email" id="email-Input"placeholder="Enter your email address"required><br><br>
+                        <input type="number" id="phone-Number" placeholder="Enter your contact Number"required><br><br>
+                        <input type="text" id="father-Name" placeholder="Enter your Father's Name"required><br><br>
+                        <textarea name="" id="address" placeholder="Enter your address"required></textarea><br><br>
+                        <input type="number" id="CNIC" placeholder="Enter your CNIC Number"required><br><br>
+                        <p style="color: whitesmoke;">Your Date of birth </p>
+                        <input type="date" id="DOB"required><br><br>
+                        <input type="text" id="caste" placeholder="Enter your Caste"required><br><br>
+                        <input type="text" id="domicile-Distt" placeholder="Enter your Domicile Distt"required><br><br>
+                        <input type="text" id="religion" placeholder="Enter your Religion"required><br><br>
+                        <input type="text" id="country" placeholder="Enter your country name"required><br><br>
+                        <input type="text" id="education"placeholder="Enter your education qualification"required><br><br>
+                        <input type="text" id="experience"placeholder="Enter your experience"required><br><br>
+                        <textarea name="" id="computer-Skills" placeholder="Enter your Computer Skills"required></textarea><br><br>
+                        <textarea name="" id="communication-Skills" placeholder="Communication Skills"required></textarea><br><br>
+                        <input type="text" id="languages" placeholder="Languages"required><br><br>
+                        <button id="printBtn">Generate Your Resume</button>
+                      
+                
+                    </div>
+                </div>
+                <div id="content-box">
+                    <div id="personal-info-box">
+                        <div id="name-info">
+                            <h2>Name<br><output id="print-Name"></output></h2>
+                        </div>
+                        
+                        <br><hr><br>
+                        <h1>Contact Info</h1><br>
+                        <div id="contact-info">
+                            <p>Email:<output id="print-Email"></output></p><br>
+                            <p>Mobile: <output id="print-Phone"></output></p><br>
+                            <p>Address: <output id="print-Address"></output> </p>
+                        </div>
+                        <br><hr><br>
+                        <div>
+                            <h1>Personal Info</h1><br>
+                            <table>
+                                <tr>
+                                    <td>Father Name:</td>
+                                    <td><output id="print-FN"></output></td>
+                                </tr>
+                                <tr>
+                                    <td>CNIC:</td>
+                                    <td><output id="print-CNIC"></output></td>
+                                </tr>
+                                <tr>
+                                    <td>DOB:</td>
+                                    <td><output id="print-DOB"></output></td>
+                                </tr>
+                                <tr>
+                                    <td>Caste:</td>
+                                    <td><output id="print-Caste"></output></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Domicile Disttrict:</td>
+                                    <td><output id="print-Distt"></output></td>
+                                </tr>
+                                <tr>
+                                    <td>Religon:</td>
+                                    <td><output id="print-Religion"></output></td>
+                                </tr>
+                                <tr>
+                                    <td>Nationality:</td>
+                                    <td><output id="print-Country"></output></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    <div id="education-info-box">
+                        <br><br>
+                        <hr>
+                        <h1>Education</h1>
+                        <hr><br>
+                        <div>
+                            <p><output id="print-Edu"></output></p>
+                        </div>
+                        <br><br>
+                        <hr>
+                        <h1>Experience</h1>
+                        <hr><br>
+                        <div>
+                            <p><output id="print-Exp"></output></p>
+                        </div>
+                        <br><br>
+                        <hr>
+                        <h1>Skills</h1>
+                        <hr><br>
+                        <div>
+                            <h3>Computer Skills:</h3>
+                            <p><output id="print-Computer-Skills"></output></p>
+                        </div>
+                        <br><br>
+                        <div>
+                            <h3>Communication:</h3>
+                            <p><output id="print-Communication-Skills"></output></p>
+                        </div>
+                        <br><br>
+                        <div>
+                            <h3>Languages:</h3>
+                            <p><output id="print-Languages"></output></p>
+                        </div>
+                        <br><br>
+                        <hr>
+                        <h1>Career Objectives</h1>
+                        <hr>
+                        <br>
+                        <div>
+                            <p>Seeking a challenging opportunity where I will be able to utilize my strong organizational skills, 
+                                educational background, 
+                                and ability to work well with people, 
+                                which will allow me to grow personally and professionally. 
+                                I am self-motivated and able to work both independently.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./app.js"></script>
+    </body>
+</html>
